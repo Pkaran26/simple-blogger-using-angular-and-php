@@ -1,0 +1,46 @@
+﻿<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref=".main">
+                <h1 style="text-align:center;color:crimson;text-shadow:2px 2px 1px black;font-family:Century;font-size:20px;margin:0">
+                    <span style="color:darkcyan">BLOG</span>GER
+                </h1>
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="home.main({uid:{{uid}}})">Home<span class="sr-only">(current)</span></a></li>
+                <li><a ui-sref="home.create({uid:{{uid}}})">Create Post</a></li>
+                <li><a ui-sref="home.manage({uid:{{uid}}})">Manage Post</a></li>
+                <li><a ui-sref="signin">Logout</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid" style="padding-top:80px;">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3>Manage Post</h3>
+            <hr />
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div ng-repeat="x in data">
+                        <strong>{{x.title}}</strong>
+                        <a ng-click="delP(x.bid)">delete post</a>
+                        <hr style="margin:0;margin-top:5px;margin-bottom:10px;" />
+                        <p>{{x.para}}</p>
+                        <p style="color:crimson">{{fDate(x.udate)}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

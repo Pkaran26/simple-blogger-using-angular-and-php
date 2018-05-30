@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app="blog">
+<head>
+    <title>Blogger</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Scripts/boostrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Scripts/boostrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="controllers/signin.js"></script>
+    <script src="controllers/signup.js"></script>
+    <script src="controllers/home.js"></script>
+    <script src="controllers/create.js"></script>
+    <script src="controllers/manage.js"></script>
+    <script src="controllers/main.js"></script>
+</head>
+<body ng-init="serv='http://192.168.43.5/blogger/'">
+    <div ui-view></div>
+    <script src="Scripts/boostrap/js/jquery.min.js"></script>
+    <script src="Scripts/boostrap/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

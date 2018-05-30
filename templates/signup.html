@@ -1,0 +1,33 @@
+﻿<div class="container" ng-controller="signup">
+    <h1 style="text-align:center;color:crimson;text-shadow:2px 2px 1px gray;font-family:Century;font-size:50px;padding-top:30px;">
+        <span style="color:darkcyan">BLOG</span>GER
+    </h1>
+    <div class="form-group" style="margin-top: 60px;">
+        <label>Name</label>
+        <input type="text" placeholder="Enter name" class="form-control" ng-model="name" />
+    </div>
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" placeholder="Enter username" class="form-control" ng-model="uname" />
+    </div>
+    <div class="form-group">
+        <label>Date Of Birth</label>
+        <input type="date" placeholder="Enter date of birth" class="form-control" ng-model="dob" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" placeholder="Enter email" class="form-control" ng-model="email" />
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" class="form-control" ng-model="upass" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" ng-click="submit()">Signin</button>
+        <a ui-sref="signin">Signin here</a>
+    </div>
+    <div class="form-group">
+        <span>{{chk}}</span>
+        <img src="{{url}}" style="width:50px;" />
+    </div>
+</div>
